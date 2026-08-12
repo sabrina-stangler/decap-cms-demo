@@ -5,10 +5,15 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 
 import CMS from 'decap-cms-app'
+import BlogPostPreview from './cms/previews/BlogPostPreview'
+import EventPreview from './cms/previews/EventPreview'
+
 // Initialize the CMS object
 CMS.init()
-// Now the registry is available via the CMS object.
-// CMS.registerPreviewTemplate('my-template', MyTemplate)
+
+// Register preview templates
+CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewTemplate('event', EventPreview)
 
 function App() {
   return (
