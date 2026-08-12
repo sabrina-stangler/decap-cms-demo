@@ -2,42 +2,48 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+media_folder: 'public/images/uploads'
+public_folder: '/images/uploads'
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
+  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
+    label: 'Blog' # Used in the UI
+    folder: '_posts/blog' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "event_onetime"
-    label: "One-Time Event"
-    folder: "_events/onetime"
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Rating (scale of 1-5)', name: 'rating', widget: 'number' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'event_onetime'
+    label: 'One-Time Event'
+    folder: '_events/onetime'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "event" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Promo Image", name: "flyer", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "event_recurring"
-    label: "Recurring Event"
-    folder: "_events/recurring"
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'event' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Promo Image', name: 'flyer', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'event_recurring'
+    label: 'Recurring Event'
+    folder: '_events/recurring'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "event" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Initial Date", name: "date", widget: "datetime" }
-      - { label: "Promo Image", name: "flyer", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Recurring Frequency", name: "recurringFrequency", widget: "select", options: ["Daily", "Weekly", "Monthly"] }
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'event' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Initial Date', name: 'date', widget: 'datetime' }
+      - { label: 'End Date', name: 'endDate', widget: 'datetime' }
+      - { label: 'Promo Image', name: 'flyer', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Recurring Frequency',
+          name: 'recurringFrequency',
+          widget: 'select',
+          options: ['Daily', 'Weekly', 'Monthly'],
+        }
