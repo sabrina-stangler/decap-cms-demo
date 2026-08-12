@@ -20,7 +20,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "event_onetime"
     label: "One-Time Event"
-    folder: "_posts/events"
+    folder: "_events/onetime"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -31,7 +31,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "event_recurring"
     label: "Recurring Event"
-    folder: "_posts/events"
+    folder: "_events/recurring"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
