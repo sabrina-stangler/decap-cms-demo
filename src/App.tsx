@@ -12,7 +12,7 @@ CMS.init()
 
 function App() {
   return (
-    <BrowserRouter basename='/decap-cms-demo'>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
