@@ -2,12 +2,6 @@ import Events from '../components/Events'
 import Menus from '../components/Menus'
 
 export default function Home() {
-  const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    // Handle form submission logic here
-    console.log('contact form submitted', e)
-  }
-
   return (
     <div className='w-full'>
       {/* Events Section */}
@@ -16,7 +10,7 @@ export default function Home() {
       {/* Menus Section */}
       <Menus />
 
-      <form name='contact' data-netlify='true' onSubmit={handleContactSubmit}>
+      <form name='contact' data-netlify='true'>
         <p>
           <label>
             Name <input type='text' name='name' />
