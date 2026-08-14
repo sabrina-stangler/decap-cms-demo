@@ -47,3 +47,29 @@ collections:
           widget: 'select',
           options: ['Daily', 'Weekly', 'Monthly'],
         }
+  - name: 'menus'
+    label: 'Menus'
+    folder: '_menus'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'menu' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Effective Date', name: 'date', widget: 'datetime' }
+      - { label: 'Menu File', name: 'menuFile', widget: 'file' }
+  - name: 'catering_images'
+    label: 'Catering Images'
+    folder: '_images/catering'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'image' }
+      - { label: 'Image File', name: 'imageFile', widget: 'file' }
+  - name: 'gallery_images'
+    label: 'Gallery Images'
+    folder: '_images/gallery'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'image' }
+      - { label: 'Image File', name: 'imageFile', widget: 'file' }
