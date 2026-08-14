@@ -1,4 +1,5 @@
 import Events from '../components/Events'
+import Menus from '../components/Menus'
 
 export default function Home() {
   const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,6 +12,9 @@ export default function Home() {
     <div className='w-full'>
       {/* Events Section */}
       <Events />
+
+      {/* Menus Section */}
+      <Menus />
 
       <form name='contact' data-netlify='true' onSubmit={handleContactSubmit}>
         <p>
