@@ -12,7 +12,7 @@ export default function Home() {
       {/* Events Section */}
       <Events />
 
-      <form name='contact' netlify onSubmit={handleContactSubmit}>
+      <form name='contact' data-netlify='true' onSubmit={handleContactSubmit}>
         <p>
           <label>
             Name <input type='text' name='name' />
