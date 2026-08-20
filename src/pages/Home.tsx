@@ -26,6 +26,23 @@ export default function Home() {
           <button type='submit'>Send</button>
         </p>
       </form>
+
+      <form name='private-event' method='POST' data-netlify='true'>
+        <input type='hidden' name='form-name' value='private-event' />
+        <p>
+          <label>
+            Name <input type='text' name='name' />
+          </label>
+        </p>
+        <p>
+          <label>
+            Email <input type='email' name='email' />
+          </label>
+        </p>
+        <p>
+          <button type='submit'>Send</button>
+        </p>
+      </form>
     </div>
   )
 }
