@@ -11,6 +11,7 @@ export default function Home() {
       <Menus />
 
       <form name='contact' method='POST' data-netlify='true'>
+        <input type='hidden' name='form-name' value='contact' />
         <p>
           <label>
             Name <input type='text' name='name' />
